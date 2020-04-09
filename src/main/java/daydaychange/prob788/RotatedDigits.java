@@ -1,4 +1,4 @@
-package daydaychange.daily;
+package daydaychange.prob788;
 
 /**
  * @author nate guo

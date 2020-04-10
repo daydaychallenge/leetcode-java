@@ -1,4 +1,4 @@
-package daydaychange.prob020;
+package daydaychange.p00020;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

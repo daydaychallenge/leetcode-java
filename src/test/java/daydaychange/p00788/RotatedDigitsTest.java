@@ -1,4 +1,4 @@
-package daydaychange.prob788;
+package daydaychange.p00788;
 
 import org.junit.jupiter.api.Test;
 

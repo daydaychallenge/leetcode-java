@@ -1,4 +1,4 @@
-package daydaychange.prob020;
+package daydaychange.p00020;
 
 import java.util.Deque;
 import java.util.LinkedList;

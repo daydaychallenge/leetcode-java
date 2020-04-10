@@ -20,7 +20,7 @@ class ValidParenthesesTest {
 
     @Test
     void isValidCase2() {
-        assertEquals(true, validParentheses.isValidPair(""));
+        assertEquals(false, validParentheses.isValidPair(""));
     }
 
     @Test

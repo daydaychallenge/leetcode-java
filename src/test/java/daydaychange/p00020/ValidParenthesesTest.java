@@ -9,27 +9,27 @@ import static org.junit.jupiter.api.Assertions.*;
  * @version 1.0
  * @date 2020/4/10 2:28 PM
  */
-class ValidParenthesesTest {
+public class ValidParenthesesTest {
 
     private ValidParentheses validParentheses = new ValidParentheses();
 
     @Test
-    void isValidCase1() {
+    public void isValidCase1() {
         assertEquals(true, validParentheses.isValidPair(null));
     }
 
     @Test
-    void isValidCase2() {
-        assertEquals(false, validParentheses.isValidPair(""));
+    public void isValidCase2() {
+        assertEquals(true, validParentheses.isValidPair(""));
     }
 
     @Test
-    void isValidCase3() {
+    public void isValidCase3() {
         assertEquals(false, validParentheses.isValidPair("([)]"));
     }
 
     @Test
-    void isValidCase4() {
+    public void isValidCase4() {
         assertEquals(true, validParentheses.isValidPair("((()(())))"));
     }
 
@@ -44,7 +44,7 @@ class ValidParenthesesTest {
     }
 
     @Test
-    void isValidCase7() {
+    public void isValidCase7() {
         assertEquals(false, validParentheses.isValidPair("()[a]{}"));
     }
 

@@ -2,9 +2,7 @@ package daydaychange.p00186;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 /**
  * @author nate guo
@@ -18,7 +16,7 @@ class ReverseWordsIITest {
     @Test
     void reverseWords() {
         char[] src = {'t', 'h', 'e', ' ', 's', 'k', 'y', ' ', 'i', 's', ' ', 'b', 'l', 'u', 'e'};
-        System.out.println(Arrays.toString(src));
+        reverseWordsII.reverseWords(src);
         char[] exp = {'b', 'l', 'u', 'e', ' ', 'i', 's', ' ', 's', 'k', 'y', ' ', 't', 'h', 'e'};
         assertArrayEquals(exp, src);
     }

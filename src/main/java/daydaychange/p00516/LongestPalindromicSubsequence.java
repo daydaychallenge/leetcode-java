@@ -12,6 +12,9 @@ public class LongestPalindromicSubsequence {
 
     private int max = 0;
 
+    /**
+     * 回溯算法 分阶段考察每个字符
+     */
     public int longestPalindromeSubseq(String s) {
         if (s == null || s.length() == 0) return 0;
 
@@ -29,6 +32,7 @@ public class LongestPalindromicSubsequence {
             return;
         }
 
+        //当前字符加入子序列
         curSubSeq.add(s.charAt(curPos));
         int len = curSubSeq.size();
 
@@ -36,6 +40,7 @@ public class LongestPalindromicSubsequence {
         int curMax = Math.max(curLen, getLongestPalindromic(curSubSeq));
         findMaxLength(s, curPos + 1, curMax, curSubSeq);
 
+        //当前字符不加入子序列
         if (len > 0) {
             curSubSeq.remove(len - 1);
         }

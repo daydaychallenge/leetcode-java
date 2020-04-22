@@ -18,12 +18,16 @@ public class LongestPalindrome {
             for (int j = 0; j < i; j++) {
                 if (s.charAt(i) == s.charAt(j)) {
                     if (isPalindrome(s, j, i)) {
-                        maxLen = Math.max(maxLen, i - j + 1);
-                        startIndex = j;
+                        if (i - j + 1 > maxLen) {
+                            maxLen = i - j + 1;
+                            startIndex = j;
+                        }
                     }
                 }
             }
         }
+
+        System.out.println("maxLen: " + maxLen + " startIndex: " + startIndex);
 
         return s.substring(startIndex, startIndex + maxLen);
     }

@@ -1,9 +1,8 @@
-package daydaychange.p00445;
+package daydaychange.common;
 
-import daydaychange.common.ListNode;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author nate guo

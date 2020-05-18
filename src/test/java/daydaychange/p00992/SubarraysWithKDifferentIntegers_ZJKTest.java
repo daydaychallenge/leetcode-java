@@ -16,7 +16,7 @@ class SubarraysWithKDifferentIntegers_ZJKTest {
     @Test
     void subarraysWithKDistinctCase1() {
         int[] arr = {1, 2, 1, 2, 3};
-        assertEquals(7, solution.subarraysWithKDistinct(arr, 2));
+        assertEquals(7, solution.test(arr, 2));
     }
 
     @Test

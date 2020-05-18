@@ -7,6 +7,26 @@ package daydaychange.p00992;
  */
 public class SubarraysWithKDifferentIntegers_ZJK {
 
+
+     public int test(int[] A, int K) {
+         int res = 0, prefix = 0;
+         int[] m = new int[A.length + 1];
+         for (int i = 0, j = 0, cnt = 0; i < A.length; ++i) {
+             if (m[A[i]]++ == 0) cnt++;
+             while (cnt > K) {
+                 m[A[j++]]--;
+                 cnt--;
+                 prefix = 0;
+             }
+             while (m[A[j]] > 1) {
+                 prefix++;
+                 m[A[j++]]--;
+             }
+             if (cnt == K) res += prefix + 1;
+         }
+         return res;
+     }
+
     /**
      * Time Limit Exceeded
      */

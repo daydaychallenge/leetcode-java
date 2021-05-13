@@ -1,5 +1,7 @@
 package daydaychange.common;
 
+import java.util.StringJoiner;
+
 public class TreeNode {
     public int val;
     public TreeNode left;
@@ -10,5 +12,12 @@ public class TreeNode {
         this.val = val;
         this.left = left;
         this.right = right;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", TreeNode.class.getSimpleName() + "[", "]")
+                .add("val=" + val)
+                .toString();
     }
 }

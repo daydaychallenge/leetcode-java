@@ -13,8 +13,8 @@ public class ConvertSortedArrayToBinarySearchTree {
         if (start > end) return null;
         int mid = start + (end - start) / 2;
         TreeNode node = new TreeNode(nums[mid]);
-        node.left = helper(nums, start, mid);
-        node.right = helper(nums, mid, end);
+        node.left = helper(nums, start, mid - 1);
+        node.right = helper(nums, mid + 1, end);
         return node;
     }
 

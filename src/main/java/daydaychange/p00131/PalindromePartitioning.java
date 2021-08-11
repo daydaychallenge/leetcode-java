@@ -7,7 +7,7 @@ public class PalindromePartitioning {
 
     public List<List<String>> partition(String s) {
         List<List<String>> ans = new ArrayList<>();
-        helper(s, ans, new ArrayList<String>(), 0);
+        helper(s, ans, new ArrayList<>(), 0);
         return ans;
     }
 

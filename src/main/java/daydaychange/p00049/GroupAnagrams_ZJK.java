@@ -13,16 +13,22 @@ public class GroupAnagrams_ZJK {
             31, 37, 41, 43, 47, 53, 59, 61, 67,
             71, 73, 79, 83, 89, 97, 101};
 
+    public static void main(String[] args) {
+
+        GroupAnagrams_ZJK g = new GroupAnagrams_ZJK();
+
+        g.groupAnagrams(new String[]{"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"});
+    }
+
     public List<List<String>> groupAnagrams(String[] strs) {
         List<List<String>> ans = new ArrayList<>();
         if (strs == null || strs.length == 0) return ans;
 
-        Map<Integer, List<String>> map = new HashMap<>();
+        Map<Long, List<String>> map = new HashMap<>();
 
-        for (int i = 0; i < strs.length; i++) {
-            String ele = strs[i];
-            int hash = 1;
-            for (int j = 0; j < ele.length(); j ++) {
+        for (String ele : strs) {
+            long hash = 1;
+            for (int j = 0; j < ele.length(); j++) {
                 hash *= primes[ele.charAt(j) - 'a'];
             }
             List<String> r = map.get(hash);

@@ -24,7 +24,12 @@ public class CountGoodNodes {
             goodNode = 1;
             pathMaxVal = val;
         }
-        goodNode += helper(node.left, pathMaxVal) + helper(node.right, pathMaxVal);
+        if (node.left != null) {
+            goodNode += helper(node.left, pathMaxVal);
+        }
+        if (node.right != null) {
+            goodNode += helper(node.right, pathMaxVal);
+        }
         return goodNode;
     }
 }

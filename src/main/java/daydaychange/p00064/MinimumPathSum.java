@@ -11,15 +11,18 @@ public class MinimumPathSum {
     }
 
     public int minPathSum(int[][] grid) {
-
-        return helper(grid, 0, 0);
+        int[][] dp = new int[grid.length][grid[0].length];
+        return helper(grid, 0, 0, dp);
     }
 
-    public int helper(int[][] grid, int i, int j) {
+    public int helper(int[][] grid, int i, int j, int[][] dp) {
         if (i == grid.length - 1 && j == grid[i].length - 1) return grid[i][j];
-        if (i == grid.length - 1) return grid[i][j] + helper(grid, i, ++ j);
-        if (j == grid[i].length - 1) return grid[i][j] + helper(grid, ++ i, j);
-        return grid[i][j] + Math.min(helper(grid, i + 1, j), helper(grid, i, j + 1));
+        if (dp[i][j] != 0) return dp[i][j];
+        if (i == grid.length - 1) return grid[i][j] + helper(grid, i, ++ j, dp);
+        if (j == grid[i].length - 1) return grid[i][j] + helper(grid, ++ i, j, dp);
+        int sum = grid[i][j] + Math.min(helper(grid, i + 1, j, dp), helper(grid, i, j + 1, dp));
+        dp[i][j] = sum;
+        return sum;
     }
 
 }
